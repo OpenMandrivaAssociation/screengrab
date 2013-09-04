@@ -13,6 +13,7 @@ BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	qt4-linguist
 BuildRequires:	libqxt-devel
+BuildRequires:	qtsingleapplication-devel
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
@@ -37,7 +38,7 @@ mkdir build
 pushd build
 %{__cmake} ../  -DCMAKE_INSTALL_PREFIX=%{_prefix} \
 		-DCMAKE_INSTALL_LIBDIR:PATH=%{_libdir} \
-		-DBUILD_SHARED_LIBS:BOOL=ON \
+		-DBUILD_SHARED_LIBS:BOOL=OFF \
 		-DCMAKE_BUILD_TYPE=release \
 		-DSG_USE_SYSTEM_QXT=ON
 %make
