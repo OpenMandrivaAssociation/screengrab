@@ -2,7 +2,7 @@
 
 Name:		screengrab
 Version:	1.0
-Release: 	%mkrel 2
+Release: 	3
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
 Source0:	http://screengrab.doomer.org/download//%{name}-%{version}.tar.gz
