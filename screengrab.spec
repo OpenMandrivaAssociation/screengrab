@@ -2,10 +2,11 @@
 
 Name:		screengrab
 Version:	1.0
-Release: 	9
+Release: 	10
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
 Source0:	http://screengrab.doomer.org/download//%{name}-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
 Summary:	Screen grabber
 Group:		Graphical desktop/Other
 Patch0:		screengrab-1.0-detect-lib64.patch
