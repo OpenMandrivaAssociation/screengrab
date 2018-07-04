@@ -1,20 +1,23 @@
 %define debug_package %nil
+# Module build system relies on this
+%define _disable_ld_no_undefined 1
 
 Name:		screengrab
-Version:	1.0
-Release: 	11
+Version:	1.98
+Release: 	1
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
-Source0:	http://screengrab.doomer.org/download//%{name}-%{version}.tar.gz
+Source0:	https://downloads.lxqt.org/downloads/screengrab/%{version}/screengrab-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 Summary:	Screen grabber
 Group:		Graphical desktop/Other
-Patch0:		screengrab-1.0-detect-lib64.patch
-BuildRequires:	cmake
-BuildRequires:	qt4-devel
-BuildRequires:	qt4-linguist
-BuildRequires:	libqxt-devel
-BuildRequires:	qtsingleapplication-devel
+BuildRequires:	cmake ninja
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5X11Extras)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(Qt5LinguistTools)
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
@@ -34,24 +37,20 @@ find . -type f | xargs chmod 644
 %{__rm} -rf src/3rdparty
 
 %build
-#cmake_qt4 -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=release -DSG_USE_SYSTEM_QXT=ON
-mkdir build
-pushd build
-%{__cmake} ../  -DCMAKE_INSTALL_PREFIX=%{_prefix} \
+%cmake_qt5	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 		-DCMAKE_INSTALL_LIBDIR:PATH=%{_libdir} \
 		-DBUILD_SHARED_LIBS:BOOL=OFF \
 		-DCMAKE_BUILD_TYPE=release \
-		-DSG_USE_SYSTEM_QXT=ON
-%make
-popd
+		-G Ninja
+%ninja_build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 %files
 %doc docs/*
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/pixmaps/%{name}.png
 %{_datadir}/%{name}
 %{_libdir}/%{name}/*.so*
+%{_datadir}/icons/hicolor/32x32/apps/screengrab.png
