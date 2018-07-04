@@ -18,6 +18,7 @@ BuildRequires:	cmake(Qt5X11Extras)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires:	cmake(qt5xdg)
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
