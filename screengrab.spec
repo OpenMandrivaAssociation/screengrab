@@ -3,7 +3,7 @@
 %define _disable_ld_no_undefined 1
 
 Name:		screengrab
-Version:	1.98
+Version:	1.99
 Release: 	1
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
@@ -11,7 +11,8 @@ Source0:	https://downloads.lxqt.org/downloads/screengrab/%{version}/screengrab-%
 Source100:	%{name}.rpmlintrc
 Summary:	Screen grabber
 Group:		Graphical desktop/Other
-BuildRequires:	cmake ninja
+BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5X11Extras)
