@@ -4,7 +4,7 @@
 
 Name:		screengrab
 Version:	1.99
-Release: 	1
+Release: 	2
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
 Source0:	https://downloads.lxqt.org/downloads/screengrab/%{version}/screengrab-%{version}.tar.xz
