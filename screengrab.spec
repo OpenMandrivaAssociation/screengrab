@@ -35,7 +35,7 @@ Main features:
 %prep
 %setup -q
 find . -type f | xargs chmod 644
-%apply_patches
+%autopatch -p1
 %{__rm} -rf src/3rdparty
 
 %build
