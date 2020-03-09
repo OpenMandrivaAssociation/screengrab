@@ -3,7 +3,7 @@
 %define _disable_ld_no_undefined 1
 
 Name:		screengrab
-Version:	1.101
+Version:	2.0.0
 Release: 	1
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
@@ -33,7 +33,7 @@ Main features:
     * minimize to system tray and work from at (tray menu) 
 
 %prep
-%setup -q
+%autosetup -p1
 find . -type f | xargs chmod 644
 %autopatch -p1
 %{__rm} -rf src/3rdparty
