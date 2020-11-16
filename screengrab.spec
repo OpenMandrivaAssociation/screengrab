@@ -3,11 +3,11 @@
 %define _disable_ld_no_undefined 1
 
 Name:		screengrab
-Version:	2.0.1
-Release: 	1
+Version:	2.1.0
+Release:	1
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
-Source0:	https://downloads.lxqt.org/downloads/screengrab/%{version}/screengrab-%{version}.tar.xz
+Source0:	https://github.com/lxqt/screengrab/archive/%{version}.tar.gz?/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 Summary:	Screen grabber
 Group:		Graphical desktop/Other
