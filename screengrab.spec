@@ -2,17 +2,15 @@
 # Module build system relies on this
 %define _disable_ld_no_undefined 1
 
+Summary:	Screen grabber
 Name:		screengrab
-Version:	2.1.0
+Version:	2.2.0
 Release:	1
+Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
-Source0:	https://github.com/lxqt/screengrab/archive/%{version}.tar.gz?/%{name}-%{version}.tar.gz
+Source0:	https://github.com/lxqt/screengrab/archive/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-Summary:	Screen grabber
-Group:		Graphical desktop/Other
-BuildRequires:	cmake
-BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5X11Extras)
@@ -36,7 +34,7 @@ Main features:
 %autosetup -p1
 find . -type f | xargs chmod 644
 %autopatch -p1
-%{__rm} -rf src/3rdparty
+rm -rf src/3rdparty
 
 %build
 %cmake_qt5	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
