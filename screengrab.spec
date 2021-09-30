@@ -1,4 +1,3 @@
-%define debug_package %nil
 # Module build system relies on this
 %define _disable_ld_no_undefined 1
 
