@@ -3,12 +3,12 @@
 
 Summary:	Screen grabber
 Name:		screengrab
-Version:	2.2.0
+Version:	2.3.0
 Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
-Source0:	https://github.com/lxqt/screengrab/archive/%{name}-%{version}.tar.xz
+Source0:	https://github.com/lxqt/screengrab/releases/download/%{version}/screengrab-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Widgets)
