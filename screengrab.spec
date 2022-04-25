@@ -3,7 +3,7 @@
 
 Summary:	Screen grabber
 Name:		screengrab
-Version:	2.3.0
+Version:	2.4.0
 Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv2
@@ -50,6 +50,7 @@ rm -rf src/3rdparty
 %doc docs/*
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/metainfo/%{name}.metainfo.xml
 %{_datadir}/%{name}
 %{_libdir}/%{name}/*.so*
-%{_datadir}/icons/hicolor/32x32/apps/screengrab.png
+%{_datadir}/icons/hicolor/scalable/apps/*.svg
