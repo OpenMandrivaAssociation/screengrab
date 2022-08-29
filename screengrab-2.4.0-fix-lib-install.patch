@@ -1,0 +1,12 @@
+diff -Naur screengrab-2.4.0/CMakeLists.txt screengrab-2.4.0.tpg/CMakeLists.txt
+--- screengrab-2.4.0/CMakeLists.txt	2022-04-16 13:54:25.000000000 +0000
++++ screengrab-2.4.0.tpg/CMakeLists.txt	2022-08-29 15:43:41.979242821 +0000
+@@ -66,7 +66,7 @@
+ 
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Woverloaded-virtual -Wall -Wextra")
+ 
+-set(SG_LIBDIR "${CMAKE_INSTALL_LIBDIR}/screengrab")
++set(SG_LIBDIR "${CMAKE_INSTALL_LIBDIR}")
+ set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${SG_LIBDIR}")
+ message(STATUS "Library path: ${CMAKE_INSTALL_RPATH}")
+ 

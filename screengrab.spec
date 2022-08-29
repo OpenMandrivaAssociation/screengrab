@@ -4,12 +4,14 @@
 Summary:	Screen grabber
 Name:		screengrab
 Version:	2.4.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
 Source0:	https://github.com/lxqt/screengrab/releases/download/%{version}/screengrab-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
+Patch0:		screengrab-2.4.0-fix-lib-install.patch
+Patch1:		https://github.com/lxqt/screengrab/commit/76b69b9410624910ddf63644b1e9891b5d1b31f0.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5X11Extras)
@@ -32,7 +34,6 @@ Main features:
 %prep
 %autosetup -p1
 find . -type f | xargs chmod 644
-%autopatch -p1
 rm -rf src/3rdparty
 
 %build
@@ -52,5 +53,5 @@ rm -rf src/3rdparty
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/metainfo/%{name}.metainfo.xml
 %{_datadir}/%{name}
-%{_libdir}/%{name}/*.so*
-%{_datadir}/icons/hicolor/scalable/apps/*.svg
+%{_libdir}/*.so*
+%{_iconsdir}/hicolor/scalable/apps/*.svg
