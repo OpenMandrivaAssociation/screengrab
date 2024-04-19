@@ -3,22 +3,19 @@
 
 Summary:	Screen grabber
 Name:		screengrab
-Version:	2.4.0
-Release:	3
+Version:	2.8.0
+Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		http://screengrab.doomer.org/
 Source0:	https://github.com/lxqt/screengrab/releases/download/%{version}/screengrab-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-Patch0:		screengrab-2.4.0-fix-lib-install.patch
-Patch1:		https://github.com/lxqt/screengrab/commit/76b69b9410624910ddf63644b1e9891b5d1b31f0.patch
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(Qt5Widgets)
-BuildRequires:	cmake(Qt5X11Extras)
-BuildRequires:	cmake(Qt5Network)
-BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	cmake(qt5xdg)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(KF6WindowSystem)
+BuildRequires:	cmake(Qt6LinguistTools)
+BuildRequires:	cmake(qt6xdg)
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
@@ -37,11 +34,11 @@ find . -type f | xargs chmod 644
 rm -rf src/3rdparty
 
 %build
-%cmake_qt5	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-		-DCMAKE_INSTALL_LIBDIR:PATH=%{_libdir} \
-		-DBUILD_SHARED_LIBS:BOOL=OFF \
-		-DCMAKE_BUILD_TYPE=release \
-		-G Ninja
+%cmake	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DCMAKE_INSTALL_LIBDIR:PATH=%{_libdir} \
+	-DBUILD_SHARED_LIBS:BOOL=OFF \
+	-DCMAKE_BUILD_TYPE=release \
+	-G Ninja
 %ninja_build
 
 %install
@@ -53,5 +50,4 @@ rm -rf src/3rdparty
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/metainfo/%{name}.metainfo.xml
 %{_datadir}/%{name}
-%{_libdir}/*.so*
 %{_iconsdir}/hicolor/scalable/apps/*.svg
