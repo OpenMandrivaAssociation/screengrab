@@ -7,7 +7,7 @@ Version:	2.8.0
 Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv2
-URL:		http://screengrab.doomer.org/
+URL:		https://screengrab.doomer.org/
 Source0:	https://github.com/lxqt/screengrab/releases/download/%{version}/screengrab-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	cmake(ECM)
