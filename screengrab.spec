@@ -4,7 +4,7 @@
 Summary:	Screen grabber
 Name:		screengrab
 Version:	2.9.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		https://screengrab.doomer.org/
