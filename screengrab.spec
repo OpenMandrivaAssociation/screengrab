@@ -17,6 +17,7 @@ BuildRequires:	cmake(Qt6WaylandClient)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(qt6xdg)
+BuildRequires:	cmake(VulkanHeaders)
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
