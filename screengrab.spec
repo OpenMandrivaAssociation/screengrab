@@ -20,6 +20,7 @@ BuildRequires:	cmake(qt6xdg)
 BuildRequires:	cmake(VulkanHeaders)
 BuildRequires:	cmake(LayerShellQt)
 BuildRequires:	cmake(lxqt2-build-tools)
+BuildRequires:	pkgconfig(libpng)
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
