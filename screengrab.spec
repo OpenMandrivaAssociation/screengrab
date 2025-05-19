@@ -13,6 +13,7 @@ Source100:	%{name}.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6WaylandClient)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(qt6xdg)
