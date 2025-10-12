@@ -1,0 +1,11 @@
+diff -up screengrab-3.0.0/CMakeLists.txt.omv~ screengrab-3.0.0/CMakeLists.txt
+--- screengrab-3.0.0/CMakeLists.txt.omv~	2025-10-12 02:23:14.042026873 +0200
++++ screengrab-3.0.0/CMakeLists.txt	2025-10-12 02:23:32.170930746 +0200
+@@ -20,6 +20,7 @@ set(SHELLQT_MINIMUM_VERSION "6.0.0")
+ set(QTXDG_MINIMUM_VERSION "4.2.0")
+ set(LXQTBT_MINIMUM_VERSION "2.2.0")
+ 
++find_package(Qt6 ${QT_MINIMUM_VERSION} REQUIRED GuiPrivate WaylandClientPrivate)
+ find_package(Qt6Network ${QT_MINIMUM_VERSION} REQUIRED)
+ find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+ find_package(Qt6WaylandClient ${QT_MINIMUM_VERSION} REQUIRED)

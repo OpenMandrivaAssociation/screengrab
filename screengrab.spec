@@ -4,7 +4,7 @@
 Summary:	Screen grabber
 Name:		screengrab
 Version:	3.0.0
-Release:	2
+Release:	3
 Group:		Graphical desktop/Other
 License:	GPLv2
 URL:		https://screengrab.doomer.org/
@@ -21,6 +21,9 @@ BuildRequires:	cmake(VulkanHeaders)
 BuildRequires:	cmake(LayerShellQt)
 BuildRequires:	cmake(lxqt2-build-tools)
 BuildRequires:	pkgconfig(libpng)
+
+%patchlist
+screengrab-qt-6.10.patch
 
 %description
 ScreenGrab -- program getting screenshots working in Linux and Windows. 
