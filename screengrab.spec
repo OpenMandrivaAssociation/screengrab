@@ -3,7 +3,7 @@
 
 Summary:	Screen grabber
 Name:		screengrab
-Version:	3.1.0
+Version:	3.2.0
 Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv2
